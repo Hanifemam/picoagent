@@ -1,0 +1,120 @@
+# =========================
+# OS generated files
+# =========================
+.DS_Store
+.DS_Store?
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.swp
+*.swo
+*~
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+eggs/
+.eggs/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# =========================
+# Virtual environments
+# =========================
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+conda-meta/
+
+# =========================
+# Jupyter Notebook
+# =========================
+.ipynb_checkpoints
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.iml
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+wandb/
+tensorboard/
+runs/
+
+# =========================
+# ML / Experiment outputs
+# =========================
+checkpoints/
+models/
+outputs/
+results/
+*.ckpt
+*.pth
+*.pt
+*.onnx
+
+# =========================
+# Data files
+# =========================
+data/
+datasets/
+*.csv
+*.tsv
+*.h5
+*.hdf5
+*.npy
+*.npz
+
+# =========================
+# Coverage / Testing
+# =========================
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/
+
+# =========================
+# Build systems
+# =========================
+*.manifest
+*.spec
+
+# =========================
+# Mac/Linux temporary
+# =========================
+*.tmp
+*.bak
+*.orig
+
+# =========================
+# LaTeX (if you use Overleaf sync)
+# =========================
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.out
+*.toc
+*.lof
+*.lot
