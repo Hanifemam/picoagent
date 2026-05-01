@@ -29,6 +29,7 @@ eggs/
 # =========================
 # Virtual environments
 # =========================
+var.env
 .env
 .venv
 env/
