@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-
+from typing import List, Optional, Dict, Any
 class BaseAgent(ABC):
     """Abstract base class defining the core agent interface."""
     
@@ -41,3 +41,18 @@ class BaseAgent(ABC):
         ) -> AsyncGenerator[Union[Message, 'AgentEvent'], None]:
             """Execute agent with streaming output."""
             pass
+        
+class BaseChatCompletionClient(ABC):
+    """Abstract interface for LLM providers."""
+    
+    @abstractmethod
+    async def create(
+        self,
+        messages: List[Message],
+        tools: Optional[List[Dict[str, Any]]] = None,
+        **kwargs
+    ) -> 'ChatCompletionResult':
+        """Make a single LLM API call."""
+        pass
+    
+    
