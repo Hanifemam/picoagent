@@ -55,4 +55,12 @@ class BaseChatCompletionClient(ABC):
         """Make a single LLM API call."""
         pass
     
-    
+    @abstractmethod
+    async def create_stream(
+        self,
+        messages: List[Message],
+        tools: Optional[List[Dict[str, Any]]] = None,
+        **kwargs
+    ) -> AsyncGenerator['ChatCompletionChunk', None]:
+        """Make a streaming LLM API call."""
+        pass    
