@@ -63,4 +63,27 @@ class BaseChatCompletionClient(ABC):
         **kwargs
     ) -> AsyncGenerator['ChatCompletionChunk', None]:
         """Make a streaming LLM API call."""
-        pass    
+        pass
+    
+class Agent(BaseAgent):
+    async def run_stream(
+        self,
+        task: Union[str, UserMessage, List[Message]]
+    ) -> AsuncGenerator[Union[Message, AgentEvent], None]:
+        # Prepare context with instructions and history
+        llm_message = [
+            SystemMessage(content=self.instructions),
+            *self.contect.messages,
+            *task_messages
+        ]
+
+# call model client
+completion_result = await self.model_client.create(llm_messages)
+assistant_,essage = completion_result.message
+
+# Yield the response
+yield assistant_message
+
+# Update conversation context
+
+self.context.add_message(assistant_message)
